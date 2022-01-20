@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 public class Controller {
-	
+	              
 	public final DoctorService docService;
 	public final PatientService patService;	
 	public Controller(DoctorService d, PatientService p)
@@ -34,9 +34,9 @@ public class Controller {
 	{
 		return docService.findDoctor(id);
 	}
-	@CrossOrigin("http://localhost:4200")
-	@PostMapping("/addDoctor")
-	public Doctor addDoctor(@RequestBody Doctor d)
+	@CrossOrigin("http://localhost:4200") 
+	@PostMapping("/addDoctor") 
+	public Doctor addDoctor(@RequestBody Doctor d) 
 	{
 	return docService.addDoctor(d);
 		
